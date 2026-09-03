@@ -1,0 +1,165 @@
+/* ============================================================
+   Портал — экран выбора направления с вращающимся глобусом
+   ============================================================ */
+
+.portal{
+  position:relative;
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  background:
+    radial-gradient(90% 70% at 50% 42%,rgba(62,127,193,.16),transparent 62%),
+    linear-gradient(180deg,var(--navy-900),var(--navy-950));
+}
+
+/* Шапка портала */
+.portal__top{
+  position:relative;z-index:3;
+  width:var(--shell);margin-inline:auto;
+  padding:26px 0 0;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:24px;
+}
+.portal__brand{display:flex;align-items:center;gap:14px}
+.portal__brand-mark{
+  width:44px;height:44px;flex:none;
+  display:grid;place-items:center;
+  border:1px solid var(--line-strong);border-radius:12px;
+  font-family:var(--display);font-weight:700;font-size:18px;color:var(--white);
+  letter-spacing:.04em;
+}
+.portal__brand-text{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel-300)}
+.portal__brand-text span{display:block;font-family:var(--text);font-weight:400;font-size:11px;letter-spacing:.06em;text-transform:none;color:var(--steel-500)}
+.portal__hint{
+  max-width:320px;text-align:right;
+  font-size:12px;line-height:1.7;color:var(--steel-500);
+}
+.portal__hint b{color:var(--steel-300);font-weight:500}
+
+/* Основная сцена */
+.stage{
+  position:relative;z-index:2;
+  flex:1;
+  width:var(--shell);margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(220px,1fr) minmax(320px,1.35fr) minmax(220px,1fr);
+  align-items:center;gap:clamp(12px,3vw,52px);
+  padding:20px 0 40px;
+}
+
+.stage__title{
+  position:absolute;left:0;right:0;top:clamp(8px,6vh,66px);
+  display:flex;justify-content:center;
+  z-index:0;overflow:hidden;
+}
+
+/* Карточки выбора */
+.choice{
+  position:relative;z-index:2;
+  display:block;width:100%;
+  text-align:left;
+  padding:26px 24px 22px;
+  background:linear-gradient(165deg,#FFFFFF,var(--paper));
+  border:1px solid rgba(255,255,255,.14);
+  color:var(--navy-800);
+  border-radius:var(--r);
+  cursor:pointer;
+  transition:border-color .3s var(--ease),transform .35s var(--ease),background .3s,box-shadow .35s;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+}
+.choice--right{text-align:right}
+.choice:hover,.choice.is-active{
+  border-color:var(--white);
+  box-shadow:0 30px 70px -32px rgba(62,127,193,.9);
+}
+.choice.is-active{transform:translateY(-6px)}
+.choice--left.is-active{transform:translate(-8px,-6px)}
+.choice--right.is-active{transform:translate(8px,-6px)}
+
+.choice__logo{display:block;margin-bottom:16px}
+.choice--right .choice__logo{display:flex;justify-content:flex-end}
+.choice__name{font-size:clamp(24px,2.7vw,36px);margin-bottom:6px;color:var(--navy-950)}
+.choice__tag{font-family:var(--script);font-size:17px;color:var(--steel-500);margin-bottom:14px}
+.choice__desc{font-size:13.5px;line-height:1.65;color:#4E5A68;margin:0 0 20px}
+.choice__go{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--display);font-weight:600;font-size:12.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--navy-950);
+  border-bottom:1px solid rgba(19,30,51,.25);padding-bottom:6px;
+  transition:border-color .3s,gap .3s var(--ease);
+}
+.choice:hover .choice__go{border-color:var(--navy-950);gap:16px}
+.choice__num{
+  position:absolute;top:18px;
+  font-family:var(--display);font-size:12px;letter-spacing:.2em;color:var(--steel-500);
+}
+.choice__logo{--logo-lockup:clamp(84px,9vw,116px)}
+.choice--left .choice__num{right:20px}
+.choice--right .choice__num{left:20px}
+
+/* Глобус */
+.globe{
+  position:relative;
+  display:grid;place-items:center;
+  padding-block:10px;
+}
+.globe__canvas{
+  width:100%;height:auto;
+  touch-action:none;
+  cursor:grab;
+}
+.globe__canvas:active{cursor:grabbing}
+.globe__status{
+  margin-top:10px;text-align:center;
+  min-height:52px;
+}
+.globe__status-label{
+  font-family:var(--display);font-size:11px;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--steel-500);
+}
+.globe__status-value{
+  font-family:var(--display);font-weight:700;font-size:clamp(18px,2.4vw,26px);
+  text-transform:uppercase;color:var(--white);letter-spacing:.02em;
+}
+.globe__drag{
+  display:inline-flex;align-items:center;gap:10px;margin-top:12px;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--steel-500);
+}
+.globe__drag svg{opacity:.7}
+
+/* Низ портала */
+.portal__bottom{
+  position:relative;z-index:3;
+  width:var(--shell);margin-inline:auto;
+  padding-bottom:26px;
+}
+.portal__bottom .justified{border-top:1px solid var(--line);padding-top:14px}
+
+/* Затемнение при переходе */
+.curtain{
+  position:fixed;inset:0;z-index:50;
+  background:var(--navy-950);
+  opacity:0;pointer-events:none;
+  transition:opacity .45s var(--ease);
+}
+.curtain.is-on{opacity:1;pointer-events:all}
+
+/* Планшет / мобайл */
+@media (max-width:940px){
+  .stage{
+    grid-template-columns:1fr;
+    grid-template-areas:"globe" "left" "right";
+    gap:18px;padding-top:8px;
+  }
+  .globe{grid-area:globe}
+  .choice--left{grid-area:left}
+  .choice--right{grid-area:right;text-align:left}
+  .choice--right .choice__logo{justify-content:flex-start}
+  .choice--right .choice__num{left:auto;right:20px}
+  .choice.is-active,
+  .choice--left.is-active,
+  .choice--right.is-active{transform:translateY(-4px)}
+  .globe__canvas{max-width:min(78vw,420px)}
+  .portal__hint{display:none}
+  .stage__title{display:none}
+  .portal__bottom .justified{text-align-last:left;text-align:left}
+}

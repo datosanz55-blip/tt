@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TT Exchange — обмен рублей на юани и оплата инвойсов в Китай</title>
+<meta name="description" content="TT Exchange: обмен рублей на юани по курсу дня, оплата инвойсов китайским поставщикам, переводы в CNY. Договор, прозрачная комиссия, документы для валютного контроля.">
+<meta name="theme-color" content="#0B111E">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-700-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-cyrillic.woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<!-- ================= ШАПКА ================= -->
+<header class="hdr">
+  <div class="hdr__in">
+    <a class="hdr__logo logo" href="index.html" aria-label="TT Exchange — на главную">
+      <img class="logo__mark" src="assets/img/mark-exchange.png" alt="" width="460" height="350">
+      <img class="logo__word" src="assets/img/word-exchange.png" alt="TT Exchange — обмен юаней" width="720" height="120">
+    </a>
+    <nav class="hdr__nav" aria-label="Основная навигация">
+      <a href="#about">О нас</a>
+      <a href="#services">Направления</a>
+      <a href="#calc">Курс</a>
+      <a href="#how">Как проходит сделка</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="hdr__actions">
+      <a class="hdr__switch" href="logistic.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 4h12M10 1l3 3-3 3M13 10H1M4 7l-3 3 3 3" stroke="currentColor" stroke-width="1.4"/></svg>
+        <span>Доставка из Китая</span>
+      </a>
+      <button class="hdr__burger" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= ГЕРОЙ ================= -->
+<section class="hero">
+  <div class="grid-bg"></div>
+  <div class="hero__art" aria-hidden="true">
+    <svg viewBox="0 0 900 700" fill="none">
+      <g opacity=".45">
+        <circle cx="470" cy="330" r="235" stroke="#9BA7B4" stroke-width="2.5"/>
+        <ellipse cx="470" cy="330" rx="235" ry="80" stroke="#9BA7B4" stroke-width="2"/>
+        <ellipse cx="470" cy="330" rx="235" ry="165" stroke="#9BA7B4" stroke-width="2"/>
+        <ellipse cx="470" cy="330" rx="80" ry="235" stroke="#9BA7B4" stroke-width="2"/>
+        <ellipse cx="470" cy="330" rx="165" ry="235" stroke="#9BA7B4" stroke-width="2"/>
+        <path d="M235 330h470M470 95v470" stroke="#9BA7B4" stroke-width="2"/>
+      </g>
+      <g opacity=".7" stroke="#3E7FC1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M170 250c120-120 380-150 560-60"/>
+        <path d="M700 160l32 30-38 26"/>
+        <path d="M770 420c-120 120-380 150-560 60"/>
+        <path d="M240 510l-32-30 38-26"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero__in">
+    <div class="hero__top">
+      <div>
+        <div class="eyebrow">02 / Валютные расчёты</div>
+        <div class="script" style="font-size:22px;margin-top:6px">Обмен юаней</div>
+      </div>
+      <div class="eyebrow" style="text-align:right">RUB ⇄ CNY<br>Оплата инвойсов · переводы в Китай</div>
+    </div>
+
+    <h1 class="hero__title">Рубли<br>в юани<br><em>без сюрпризов</em></h1>
+
+    <div class="hero__grid">
+      <div>
+        <p class="hero__lead">
+          Меняем рубли на юани по курсу дня и оплачиваем инвойсы вашим поставщикам в Китае.
+          Комиссия известна до сделки, договор и закрывающие документы — обязательная часть работы,
+          а не «по запросу».
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#calc">Рассчитать обмен
+            <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#services">Направления</a>
+        </div>
+      </div>
+      <div class="hero__facts">
+        <div class="hero__fact"><b><span data-fx-base>—</span> ₽</b><span>базовый курс за 1 ¥</span></div>
+        <div class="hero__fact"><b>от 0,7 %</b><span>комиссия на крупных объёмах</span></div>
+        <div class="hero__fact"><b>1 день</b><span>типовой срок зачисления</span></div>
+        <div class="hero__fact"><b>100 %</b><span>сделок по договору</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>RUB → CNY</span><span>CNY → RUB</span><span>Оплата инвойса</span><span>Перевод на счёт в CNY</span><span>Курс дня</span><span>Договор</span><span>Валютный контроль</span>
+    <span>RUB → CNY</span><span>CNY → RUB</span><span>Оплата инвойса</span><span>Перевод на счёт в CNY</span><span>Курс дня</span><span>Договор</span><span>Валютный контроль</span>
+  </div>
+</div>
+
+<!-- ================= О КОМПАНИИ ================= -->
+<section class="sec" id="about">
+  <div class="shell">
+    <div class="hero__top reveal">
+      <div style="max-width:34ch">
+        <div class="eyebrow">Задача</div>
+        <p class="muted" style="font-size:14px;margin-top:10px">
+          Импортёру нужно заплатить фабрике в юанях: быстро, по понятному курсу
+          и так, чтобы у бухгалтерии остались документы, а у банка — не осталось вопросов.
+        </p>
+      </div>
+      <div style="max-width:34ch;text-align:right">
+        <div class="eyebrow">Решение</div>
+        <p class="muted" style="font-size:14px;margin-top:10px">
+          TT Exchange фиксирует курс на сделку, показывает комиссию до подписания
+          и сопровождает платёж документами. Тот же менеджер ведёт и логистику груза.
+        </p>
+      </div>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin:clamp(24px,4vw,52px) 0 18px;overflow:hidden">
+      <span class="mega">ОБМЕН ЮАНЕЙ</span>
+    </div>
+
+    <p class="justified reveal">
+      TT Exchange — валютное плечо группы TT: деньги идут тем же маршрутом, что и ваш груз
+    </p>
+
+    <div class="stats reveal" style="margin-top:clamp(28px,4vw,54px)">
+      <div class="stat stat--sm"><b>от 100 000 ₽</b><span>минимальная сумма сделки</span></div>
+      <div class="stat"><b>0,7–2 %</b><span>комиссия в зависимости от суммы</span></div>
+      <div class="stat"><b>4 ч</b><span>среднее время от заявки до платежа</span></div>
+      <div class="stat"><b>0 ₽</b><span>за расчёт и консультацию</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= НАПРАВЛЕНИЯ ================= -->
+<section class="sec sec--alt" id="services">
+  <div class="shell">
+    <div class="sec__head reveal">
+      <h2 class="sec__title">Направления</h2>
+      <p class="sec__note">Работаем с юридическими лицами, ИП и физическими лицами по договору.</p>
+    </div>
+
+    <div class="cards reveal">
+      <article class="card">
+        <svg class="card__i" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 10h20l-5-5M28 22H8l5 5"/></svg>
+        <h3>Рубли → юани</h3>
+        <p>Основное направление. Фиксируем курс на момент подтверждения заявки, комиссия заложена в курс сделки.</p>
+        <div class="card__meta">Курс дня</div>
+      </article>
+      <article class="card">
+        <svg class="card__i" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M28 10H8l5-5M4 22h20l-5 5"/></svg>
+        <h3>Юани → рубли</h3>
+        <p>Обратный обмен для тех, кто получает выручку в CNY. Условия те же — курс и комиссия известны заранее.</p>
+        <div class="card__meta">Обратный обмен</div>
+      </article>
+      <article class="card">
+        <svg class="card__i" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3h13l6 6v20H7z"/><path d="M19 3v7h7M12 18h9M12 23h6"/></svg>
+        <h3>Оплата инвойсов</h3>
+        <p>Платим напрямую поставщику по его инвойсу. Вы присылаете счёт — мы закрываем его в юанях и присылаем подтверждение платежа.</p>
+        <div class="card__meta">Подтверждение платежа</div>
+      </article>
+      <article class="card">
+        <svg class="card__i" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="8" width="26" height="17" rx="3"/><path d="M3 14h26M8 20h6"/></svg>
+        <h3>Переводы на счёт в CNY</h3>
+        <p>Перевод на китайский расчётный счёт компании или на счёт вашего представительства.</p>
+        <div class="card__meta">Юрлица и ИП</div>
+      </article>
+      <article class="card">
+        <svg class="card__i" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 3l11 5v8c0 7-4.6 11.6-11 13-6.4-1.4-11-6-11-13V8z"/><path d="M11 16l3.5 3.5L21 13"/></svg>
+        <h3>Документы и валютный контроль</h3>
+        <p>Договор, акт, платёжные документы и пояснения для банка. Всё, что нужно бухгалтерии, — в комплекте.</p>
+        <div class="card__meta">Без «по запросу»</div>
+      </article>
+      <article class="card">
+        <svg class="card__i" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 3 4 9v14l12 6 12-6V9z"/><path d="M16 15v14M4 9l12 6 12-6"/></svg>
+        <h3>Обмен + доставка одним пакетом</h3>
+        <p>Оплата поставщику и вывоз груза через TT Logistic: один договор, один менеджер, одна зона ответственности.</p>
+        <div class="card__meta">Вместе с TT Logistic</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КАЛЬКУЛЯТОР ================= -->
+<section class="sec" id="calc">
+  <div class="shell">
+    <div class="sec__head reveal">
+      <h2 class="sec__title">Курс и расчёт</h2>
+      <p class="sec__note">
+        Базовый курс: <b><span data-fx-base>—</span> ₽ за 1 ¥</b>. Обновлён: <span data-fx-updated>—</span>.
+        Курс индикативный и фиксируется в момент подтверждения заявки.
+      </p>
+    </div>
+
+    <form class="calc reveal" id="calc-fx">
+      <div class="calc__form">
+        <div class="eyebrow" style="margin-bottom:12px">Направление обмена</div>
+        <div class="seg">
+          <input type="radio" name="dir" id="d1" value="rub2cny" checked><label for="d1">Рубли → юани</label>
+          <input type="radio" name="dir" id="d2" value="cny2rub"><label for="d2">Юани → рубли</label>
+        </div>
+
+        <label class="field"><span>Сумма обмена (<span class="amount-unit">₽</span>)</span>
+          <input type="number" name="amount" min="0" step="1000" value="1000000" inputmode="decimal">
+        </label>
+
+        <div class="disclaimer" style="margin-top:6px">
+          Комиссия заложена в курс сделки и снижается с ростом суммы.
+          Итоговые условия подтверждает менеджер до подписания договора.
+        </div>
+      </div>
+
+      <div class="calc__out">
+        <div>
+          <div class="result">
+            <div class="result__label">Вы получаете</div>
+            <div class="result__value" id="fx-get">—</div>
+            <div class="result__sub">Курс сделки: <b id="fx-rate">—</b></div>
+          </div>
+          <div class="result" style="margin-top:18px">
+            <div class="result__label">Комиссия</div>
+            <div class="result__value" style="font-size:clamp(22px,2.6vw,32px)" id="fx-fee">—</div>
+            <div class="result__sub">Тариф: <span id="fx-tier">—</span></div>
+          </div>
+          <p class="result__sub" id="fx-warn" style="color:#D8B36A"></p>
+        </div>
+        <a class="btn" href="#contact">Зафиксировать курс
+          <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= КАК ПРОХОДИТ СДЕЛКА ================= -->
+<section class="sec sec--paper" id="how">
+  <div class="shell">
+    <div class="sec__head reveal">
+      <h2 class="sec__title">Как проходит сделка</h2>
+      <p class="sec__note">Четыре шага, без «перезвоните завтра».</p>
+    </div>
+    <div class="steps reveal">
+      <div class="step"><b>01</b><h3>Заявка</h3><p>Присылаете сумму и инвойс поставщика. Менеджер называет курс, комиссию и срок.</p></div>
+      <div class="step"><b>02</b><h3>Договор</h3><p>Фиксируем курс и условия документально. Вы точно знаете, сколько юаней получит поставщик.</p></div>
+      <div class="step"><b>03</b><h3>Платёж</h3><p>Вы переводите рубли, мы отправляем юани по реквизитам из инвойса.</p></div>
+      <div class="step"><b>04</b><h3>Подтверждение</h3><p>Передаём подтверждение платежа и закрывающие документы для бухгалтерии.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec sec--alt" id="faq">
+  <div class="shell">
+    <div class="sec__head reveal">
+      <h2 class="sec__title">Вопросы</h2>
+      <p class="sec__note">Что спрашивают перед первой сделкой.</p>
+    </div>
+    <div class="faq reveal">
+      <details><summary>Какой курс вы используете?</summary><p>За основу берётся рыночный курс юаня на момент обращения. К нему добавляется комиссия, размер которой зависит от суммы сделки. Итоговый курс называется до подписания договора и не меняется задним числом.</p></details>
+      <details><summary>Какая минимальная сумма?</summary><p>Стандартный минимум — 100 000 ₽. Меньшие суммы рассматриваем индивидуально, но условия по ним хуже: фиксированные издержки на сделку не зависят от объёма.</p></details>
+      <details><summary>Какие документы я получу?</summary><p>Договор, платёжные документы и подтверждение перевода поставщику. Для юридических лиц дополнительно готовим пакет пояснений для банка в рамках валютного контроля.</p></details>
+      <details><summary>Работаете ли вы с физическими лицами?</summary><p>Да, но с обязательной идентификацией и по договору. Анонимных операций мы не проводим.</p></details>
+      <details><summary>Можно ли одновременно заказать доставку груза?</summary><p>Да. TT Logistic и TT Exchange — одна группа: мы оплачиваем инвойс, забираем товар у поставщика и везём его до вашего склада. Это один менеджер и один комплект документов.</p></details>
+      <details><summary>Сколько занимает платёж?</summary><p>Типовой срок — один рабочий день с момента поступления рублей. По части направлений платёж уходит в день обращения.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПЕРЕХОД НА ЛОГИСТИКУ ================= -->
+<section class="sec" style="padding-top:0">
+  <div class="shell">
+    <a class="crosslink reveal" href="logistic.html">
+      <img src="assets/img/mark-logistic.png" alt="" width="460" height="299">
+      <div>
+        <div class="eyebrow">Второе направление TT</div>
+        <h3>Товар оплачен — осталось привезти</h3>
+        <p>TT Logistic: выкуп у поставщика, склад в Китае, авто, ж/д, авиа и море, таможня и доставка до вашей двери.</p>
+      </div>
+      <span class="btn btn--ghost">Открыть
+        <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= КОНТАКТЫ ================= -->
+<section class="sec sec--alt" id="contact">
+  <div class="shell">
+    <div class="sec__head reveal">
+      <h2 class="sec__title">Заявка на обмен</h2>
+      <p class="sec__note">Назовём курс и комиссию по вашей сумме в течение рабочего часа.</p>
+    </div>
+
+    <div class="contact reveal">
+      <div>
+        <p class="muted" style="font-size:15px">Напишите нам сумму и направление обмена — остальное уточним сами.</p>
+        <div class="contact__list">
+          <div class="contact__item"><span>Телефон</span><a data-href="phoneHref" data-c="phone" href="#">—</a></div>
+          <div class="contact__item"><span>Telegram</span><a data-href="telegram" data-c="telegramLabel" href="#" target="_blank" rel="noopener">—</a></div>
+          <div class="contact__item"><span>Почта</span><a data-c="email" href="#" id="mail-link">—</a></div>
+          <div class="contact__item"><span>Офис</span><b data-c="addressRu">—</b></div>
+          <div class="contact__item"><span>Часы работы</span><b data-c="hours">—</b></div>
+        </div>
+      </div>
+
+      <form data-lead="exchange">
+        <div class="field-row">
+          <label class="field"><span>Имя</span><input type="text" name="Имя" required autocomplete="name"></label>
+          <label class="field"><span>Телефон или Telegram</span><input type="text" name="Контакт" required></label>
+        </div>
+        <div class="field-row">
+          <label class="field"><span>Сумма</span><input type="text" name="Сумма" placeholder="Например: 2 000 000 ₽"></label>
+          <label class="field"><span>Направление</span>
+            <select name="Направление">
+              <option>Рубли → юани</option>
+              <option>Юани → рубли</option>
+              <option>Оплата инвойса поставщику</option>
+            </select>
+          </label>
+        </div>
+        <label class="field"><span>Комментарий</span><textarea name="Комментарий" placeholder="Реквизиты инвойса, сроки, нужна ли доставка груза"></textarea></label>
+        <button class="btn" type="submit">Отправить заявку
+          <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
+        </button>
+        <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        <p class="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= ПОДВАЛ ================= -->
+<footer class="ftr">
+  <div class="ftr__in">
+    <div class="ftr__top">
+      <a class="ftr__logo" href="index.html"><img src="assets/img/logo-exchange.png" alt="TT Exchange" width="820" height="789"></a>
+      <div class="ftr__cols">
+        <div class="ftr__col">
+          <h4>Компания</h4>
+          <a href="#about">О нас</a><a href="#how">Как проходит сделка</a><a href="#faq">Вопросы</a>
+        </div>
+        <div class="ftr__col">
+          <h4>Направления</h4>
+          <a href="#services">Рубли → юани</a><a href="#services">Оплата инвойсов</a><a href="#calc">Курс</a>
+        </div>
+        <div class="ftr__col">
+          <h4>Группа TT</h4>
+          <a href="index.html">Выбор направления</a><a href="logistic.html">TT Logistic</a>
+        </div>
+        <div class="ftr__col">
+          <h4>Связь</h4>
+          <a data-href="phoneHref" data-c="phone" href="#">—</a>
+          <a data-href="telegram" data-c="telegramLabel" href="#" target="_blank" rel="noopener">—</a>
+          <a data-c="email" href="#">—</a>
+        </div>
+      </div>
+    </div>
+    <div class="ftr__mega"><span class="mega">TT EXCHANGE</span></div>
+    <div class="ftr__bottom">
+      <span>© <span data-year></span> TT Exchange. Все права защищены.</span>
+      <span>Курсы на сайте индикативные и не являются публичной офертой.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/calc-exchange.js"></script>
+<script>
+  var ml = document.getElementById('mail-link');
+  if (ml && window.TT.contacts.email) ml.href = 'mailto:' + window.TT.contacts.email;
+</script>
+</body>
+</html>

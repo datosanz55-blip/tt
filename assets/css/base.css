@@ -1,0 +1,164 @@
+/* ============================================================
+   TT — общая дизайн-система
+   Палитра и типографика взяты с логотипов TT EXCHANGE / TT LOGISTIC
+   ============================================================ */
+
+:root{
+  /* Цвета логотипов */
+  --navy-950:#070C16;
+  --navy-900:#0B111E;
+  --navy-850:#0F1728;
+  --navy-800:#131E33;
+  --navy-700:#1B2A45;
+  --navy-600:#26395A;
+
+  --steel-400:#9BA7B4;   /* серый с логотипа */
+  --steel-500:#7C8896;
+  --steel-300:#BCC6D1;
+  --steel-200:#DCE3EA;
+
+  --paper:#F2F5F8;
+  --white:#FFFFFF;
+
+  --glow:#3E7FC1;        /* холодный блик для глобуса и маркеров */
+
+  --line:rgba(155,167,180,.18);
+  --line-strong:rgba(155,167,180,.34);
+
+  /* Типографика */
+  --display:'Oswald',"Arial Narrow",Impact,sans-serif;
+  --script:'Pacifico',"Segoe Script",cursive;
+  --text:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+
+  --shell:min(1320px,92vw);
+  --r:14px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+body{
+  margin:0;
+  background:var(--navy-900);
+  color:var(--steel-200);
+  font-family:var(--text);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+
+::selection{background:var(--steel-400);color:var(--navy-950)}
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-weight:700;
+  text-transform:uppercase;
+  line-height:.92;
+  letter-spacing:-.01em;
+  margin:0;
+  color:var(--white);
+}
+
+.shell{width:var(--shell);margin-inline:auto}
+
+/* --- утилиты -------------------------------------------------- */
+.eyebrow{
+  font-family:var(--display);
+  font-weight:500;
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--steel-400);
+}
+.script{
+  font-family:var(--script);
+  text-transform:none;
+  letter-spacing:0;
+  color:var(--steel-300);
+}
+.muted{color:var(--steel-400)}
+.mono-num{font-variant-numeric:tabular-nums}
+
+/* Растянутая по ширине строка — приём с референса */
+.justified{
+  text-align:justify;
+  text-align-last:justify;
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--steel-500);
+  line-height:2;
+}
+
+/* Гигантский «просвечивающий» заголовок */
+.mega{
+  font-family:var(--display);
+  font-weight:700;
+  text-transform:uppercase;
+  line-height:.78;
+  letter-spacing:-.02em;
+  font-size:clamp(56px,15.5vw,236px);
+  color:rgba(220,227,234,.14);
+  white-space:nowrap;
+  user-select:none;
+  pointer-events:none;
+}
+
+/* Сетка фона как на референсе */
+.grid-bg{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(to right,var(--line) 1px,transparent 1px),
+    linear-gradient(to bottom,var(--line) 1px,transparent 1px);
+  background-size:clamp(80px,11vw,164px) clamp(80px,11vw,164px);
+  -webkit-mask-image:radial-gradient(120% 100% at 50% 30%,#000 30%,transparent 100%);
+          mask-image:radial-gradient(120% 100% at 50% 30%,#000 30%,transparent 100%);
+  pointer-events:none;
+}
+
+/* --- кнопки --------------------------------------------------- */
+.btn{
+  --bg:var(--white); --fg:var(--navy-950);
+  display:inline-flex;align-items:center;gap:12px;
+  padding:15px 28px;
+  background:var(--bg);color:var(--fg);
+  border:1px solid transparent;border-radius:999px;
+  font-family:var(--display);font-weight:600;font-size:14px;
+  letter-spacing:.14em;text-transform:uppercase;
+  cursor:pointer;
+  transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--ghost{--bg:transparent;--fg:var(--white);border-color:var(--line-strong)}
+.btn--ghost:hover{border-color:var(--steel-300);background:rgba(220,227,234,.06)}
+.btn__arrow{transition:transform .25s var(--ease)}
+.btn:hover .btn__arrow{transform:translate(3px,-3px)}
+
+:where(a,button,summary,input,select,textarea):focus-visible{
+  outline:2px solid var(--glow);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* --- появление при скролле ------------------------------------ */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* --- Логотип (знак + надпись из оригинального лого) ------------- */
+.logo{display:inline-flex;align-items:center;gap:14px}
+.logo__mark{height:var(--logo-mark,46px);width:auto}
+.logo__word{height:var(--logo-word,22px);width:auto}
+.logo--stack{flex-direction:column;align-items:flex-start;gap:10px}
+.logo--lockup img{height:var(--logo-lockup,120px);width:auto}
