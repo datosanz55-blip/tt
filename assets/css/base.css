@@ -191,8 +191,20 @@ h1,h2,h3,h4{
   .reveal{opacity:1;transform:none;transition:none}
 }
 
-/* --- Логотип (знак + надпись из оригинального лого) ------------- */
-.logo{display:inline-flex;align-items:center;gap:14px}
-.logo__mark{height:var(--logo-mark,46px);width:auto}
-.logo__word{height:var(--logo-word,22px);width:auto}
+/* --- Логотип ---------------------------------------------------
+   В крупных местах (портал, подвал, плашка перехода) стоит цельный
+   логотип. В шапке — фирменный знак и название набором: надпись на
+   оригинале перекрыта тенью грузовика и не отделяется без потерь. */
+.logo{display:inline-flex;align-items:center;gap:13px}
+.logo__mark{height:var(--logo-mark,46px);width:auto;flex:none}
+.logo__text{display:flex;flex-direction:column;gap:2px;line-height:1}
+.logo__name{
+  font-family:var(--display);font-weight:800;
+  font-size:var(--logo-name,17px);letter-spacing:-.015em;color:var(--ink);
+  text-transform:uppercase;
+}
+.logo__sub{
+  font-family:var(--script);
+  font-size:var(--logo-sub,12.5px);color:var(--accent);letter-spacing:0;
+}
 .logo--lockup img{height:var(--logo-lockup,120px);width:auto}
