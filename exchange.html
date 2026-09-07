@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TT Exchange — обмен рублей на юани и оплата инвойсов в Китай</title>
 <meta name="description" content="TT Exchange: обмен рублей на юани по курсу дня, оплата инвойсов китайским поставщикам, переводы в CNY. Договор, прозрачная комиссия, документы для валютного контроля.">
-<meta name="theme-color" content="#0B111E">
+<meta name="theme-color" content="#EDECF1">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-700-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-800-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -20,7 +20,7 @@
   <div class="hdr__in">
     <a class="hdr__logo logo" href="index.html" aria-label="TT Exchange — на главную">
       <img class="logo__mark" src="assets/img/mark-exchange.png" alt="" width="460" height="350">
-      <img class="logo__word" src="assets/img/word-exchange.png" alt="TT Exchange — обмен юаней" width="720" height="120">
+      <img class="logo__word" src="assets/img/word-exchange-dark.png" alt="TT Exchange — обмен юаней" width="720" height="120">
     </a>
     <nav class="hdr__nav" aria-label="Основная навигация">
       <a href="#about">О нас</a>
@@ -45,17 +45,18 @@
 <!-- ================= ГЕРОЙ ================= -->
 <section class="hero">
   <div class="grid-bg"></div>
+  <div class="glow hero__glow"></div>
   <div class="hero__art" aria-hidden="true">
     <svg viewBox="0 0 900 700" fill="none">
-      <g opacity=".45">
-        <circle cx="470" cy="330" r="235" stroke="#9BA7B4" stroke-width="2.5"/>
-        <ellipse cx="470" cy="330" rx="235" ry="80" stroke="#9BA7B4" stroke-width="2"/>
-        <ellipse cx="470" cy="330" rx="235" ry="165" stroke="#9BA7B4" stroke-width="2"/>
-        <ellipse cx="470" cy="330" rx="80" ry="235" stroke="#9BA7B4" stroke-width="2"/>
-        <ellipse cx="470" cy="330" rx="165" ry="235" stroke="#9BA7B4" stroke-width="2"/>
-        <path d="M235 330h470M470 95v470" stroke="#9BA7B4" stroke-width="2"/>
+      <g opacity=".26" stroke="#0A0F1E" stroke-width="2">
+        <circle cx="470" cy="330" r="235"/>
+        <ellipse cx="470" cy="330" rx="235" ry="80"/>
+        <ellipse cx="470" cy="330" rx="235" ry="165"/>
+        <ellipse cx="470" cy="330" rx="80" ry="235"/>
+        <ellipse cx="470" cy="330" rx="165" ry="235"/>
+        <path d="M235 330h470M470 95v470"/>
       </g>
-      <g opacity=".7" stroke="#3E7FC1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <g opacity=".5" stroke="#0B57F0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
         <path d="M170 250c120-120 380-150 560-60"/>
         <path d="M700 160l32 30-38 26"/>
         <path d="M770 420c-120 120-380 150-560 60"/>
@@ -70,7 +71,10 @@
         <div class="eyebrow">02 / Валютные расчёты</div>
         <div class="script" style="font-size:22px;margin-top:6px">Обмен юаней</div>
       </div>
-      <div class="eyebrow" style="text-align:right">RUB ⇄ CNY<br>Оплата инвойсов · переводы в Китай</div>
+      <div style="text-align:right">
+        <p class="tagline" style="margin:0 0 8px">Your connection to <b>China</b></p>
+        <div class="eyebrow">RUB ⇄ CNY<br>Оплата инвойсов · переводы в Китай</div>
+      </div>
     </div>
 
     <h1 class="hero__title">Рубли<br>в юани<br><em>без сюрпризов</em></h1>
@@ -90,8 +94,8 @@
         </div>
       </div>
       <div class="hero__facts">
-        <div class="hero__fact"><b><span data-fx-base>—</span> ₽</b><span>базовый курс за 1 ¥</span></div>
-        <div class="hero__fact"><b>от 0,7 %</b><span>комиссия на крупных объёмах</span></div>
+        <div class="hero__fact"><b><span data-fx-base>—</span> ₽</b><span>курс от, за 1 ¥</span></div>
+        <div class="hero__fact"><b>4</b><span>ступени курса по объёму</span></div>
         <div class="hero__fact"><b>1 день</b><span>типовой срок зачисления</span></div>
         <div class="hero__fact"><b>100 %</b><span>сделок по договору</span></div>
       </div>
@@ -105,6 +109,78 @@
     <span>RUB → CNY</span><span>CNY → RUB</span><span>Оплата инвойса</span><span>Перевод на счёт в CNY</span><span>Курс дня</span><span>Договор</span><span>Валютный контроль</span>
   </div>
 </div>
+
+<!-- ================= КУРС И РАСЧЁТ ================= -->
+<section class="sec" id="calc">
+  <div class="shell">
+    <div class="sec__head reveal">
+      <h2 class="sec__title">Курс и расчёт</h2>
+      <p class="sec__note">
+        Чем больше объём, тем выгоднее ставка. Курс индикативный и фиксируется
+        в момент подтверждения заявки. Обновлён: <span data-fx-updated>—</span>.
+      </p>
+    </div>
+
+    <div class="rate">
+      <div class="board reveal" data-board></div>
+
+      <div class="rate__side reveal">
+        <div class="eyebrow">Как читать табло</div>
+        <h3 style="font-size:clamp(20px,2.4vw,30px);margin:10px 0 0">Ставка зависит только от объёма сделки</h3>
+        <div class="rate__list">
+          <div class="rate__li">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M10 1.5 18 5v6c0 4.4-3 7.4-8 8.5C5 18.4 2 15.4 2 11V5z"/><path d="M6.6 10.2 9 12.6l4.4-4.6"/></svg>
+            <span>В строке — сколько рублей вы отдаёте за один юань. Комиссия уже внутри курса, сверху ничего не добавляется.</span>
+          </div>
+          <div class="rate__li">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M2 14V8m5 6V4m5 10v-4m5 4V6"/></svg>
+            <span>Ступень определяется суммой в юанях: перешли порог — курс пересчитывается автоматически.</span>
+          </div>
+          <div class="rate__li">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10" cy="10" r="8"/><path d="M10 6v4l2.6 2"/></svg>
+            <span>Курс держится в течение рабочего дня и фиксируется договором на момент заявки.</span>
+          </div>
+        </div>
+        <a class="btn" href="#contact">Зафиксировать курс
+          <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <form class="calc reveal" id="calc-fx" style="margin-top:clamp(22px,3vw,36px)">
+      <div class="calc__form">
+        <div class="eyebrow" style="margin-bottom:12px">Направление обмена</div>
+        <div class="seg">
+          <input type="radio" name="dir" id="d1" value="rub2cny" checked><label for="d1">Рубли → юани</label>
+          <input type="radio" name="dir" id="d2" value="cny2rub"><label for="d2">Юани → рубли</label>
+        </div>
+
+        <label class="field"><span>Сумма обмена (<span class="amount-unit">₽</span>)</span>
+          <input type="number" name="amount" min="0" step="1000" value="1000000" inputmode="decimal">
+        </label>
+
+        <p class="muted" style="font-size:13px;margin:0">
+          Расчёт идёт по той же таблице, что и табло выше: ступень подбирается
+          автоматически по объёму сделки.
+        </p>
+      </div>
+
+      <div class="calc__out">
+        <div>
+          <div class="result">
+            <div class="result__label">Вы получаете</div>
+            <div class="result__value" id="fx-get">—</div>
+            <div class="result__sub">Курс сделки: <b id="fx-rate">—</b> · ступень <span id="fx-tier">—</span></div>
+          </div>
+          <p class="result__sub" id="fx-warn" style="margin-top:18px"></p>
+        </div>
+        <a class="btn" href="#contact">Оставить заявку
+          <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
+        </a>
+      </div>
+    </form>
+  </div>
+</section>
 
 <!-- ================= О КОМПАНИИ ================= -->
 <section class="sec" id="about">
@@ -135,8 +211,8 @@
     </p>
 
     <div class="stats reveal" style="margin-top:clamp(28px,4vw,54px)">
-      <div class="stat stat--sm"><b>от 100 000 ₽</b><span>минимальная сумма сделки</span></div>
-      <div class="stat"><b>0,7–2 %</b><span>комиссия в зависимости от суммы</span></div>
+      <div class="stat"><b>от 200 ¥</b><span>минимальный объём обмена</span></div>
+      <div class="stat"><b>7</b><span>лет работы с китайским направлением</span></div>
       <div class="stat"><b>4 ч</b><span>среднее время от заявки до платежа</span></div>
       <div class="stat"><b>0 ₽</b><span>за расчёт и консультацию</span></div>
     </div>
@@ -144,7 +220,7 @@
 </section>
 
 <!-- ================= НАПРАВЛЕНИЯ ================= -->
-<section class="sec sec--alt" id="services">
+<section class="sec sec--tint" id="services">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Направления</h2>
@@ -192,59 +268,9 @@
   </div>
 </section>
 
-<!-- ================= КАЛЬКУЛЯТОР ================= -->
-<section class="sec" id="calc">
-  <div class="shell">
-    <div class="sec__head reveal">
-      <h2 class="sec__title">Курс и расчёт</h2>
-      <p class="sec__note">
-        Базовый курс: <b><span data-fx-base>—</span> ₽ за 1 ¥</b>. Обновлён: <span data-fx-updated>—</span>.
-        Курс индикативный и фиксируется в момент подтверждения заявки.
-      </p>
-    </div>
-
-    <form class="calc reveal" id="calc-fx">
-      <div class="calc__form">
-        <div class="eyebrow" style="margin-bottom:12px">Направление обмена</div>
-        <div class="seg">
-          <input type="radio" name="dir" id="d1" value="rub2cny" checked><label for="d1">Рубли → юани</label>
-          <input type="radio" name="dir" id="d2" value="cny2rub"><label for="d2">Юани → рубли</label>
-        </div>
-
-        <label class="field"><span>Сумма обмена (<span class="amount-unit">₽</span>)</span>
-          <input type="number" name="amount" min="0" step="1000" value="1000000" inputmode="decimal">
-        </label>
-
-        <div class="disclaimer" style="margin-top:6px">
-          Комиссия заложена в курс сделки и снижается с ростом суммы.
-          Итоговые условия подтверждает менеджер до подписания договора.
-        </div>
-      </div>
-
-      <div class="calc__out">
-        <div>
-          <div class="result">
-            <div class="result__label">Вы получаете</div>
-            <div class="result__value" id="fx-get">—</div>
-            <div class="result__sub">Курс сделки: <b id="fx-rate">—</b></div>
-          </div>
-          <div class="result" style="margin-top:18px">
-            <div class="result__label">Комиссия</div>
-            <div class="result__value" style="font-size:clamp(22px,2.6vw,32px)" id="fx-fee">—</div>
-            <div class="result__sub">Тариф: <span id="fx-tier">—</span></div>
-          </div>
-          <p class="result__sub" id="fx-warn" style="color:#D8B36A"></p>
-        </div>
-        <a class="btn" href="#contact">Зафиксировать курс
-          <svg class="btn__arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
-        </a>
-      </div>
-    </form>
-  </div>
-</section>
 
 <!-- ================= КАК ПРОХОДИТ СДЕЛКА ================= -->
-<section class="sec sec--paper" id="how">
+<section class="sec sec--dark" id="how">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Как проходит сделка</h2>
@@ -260,15 +286,15 @@
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="sec sec--alt" id="faq">
+<section class="sec sec--paper" id="faq">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Вопросы</h2>
       <p class="sec__note">Что спрашивают перед первой сделкой.</p>
     </div>
     <div class="faq reveal">
-      <details><summary>Какой курс вы используете?</summary><p>За основу берётся рыночный курс юаня на момент обращения. К нему добавляется комиссия, размер которой зависит от суммы сделки. Итоговый курс называется до подписания договора и не меняется задним числом.</p></details>
-      <details><summary>Какая минимальная сумма?</summary><p>Стандартный минимум — 100 000 ₽. Меньшие суммы рассматриваем индивидуально, но условия по ним хуже: фиксированные издержки на сделку не зависят от объёма.</p></details>
+      <details><summary>Какой курс вы используете?</summary><p>За основу берётся рыночный курс юаня на момент обращения, к нему заложена наша комиссия — отдельно сверху ничего не начисляется. Итоговая ставка зависит только от объёма сделки и видна в табло. Курс называется до подписания договора и не меняется задним числом.</p></details>
+      <details><summary>Какая минимальная сумма?</summary><p>Табло начинается с 200 ¥ — это минимальный объём одной сделки. Меньшие суммы рассматриваем индивидуально, но условия по ним хуже: фиксированные издержки на сделку не зависят от объёма.</p></details>
       <details><summary>Какие документы я получу?</summary><p>Договор, платёжные документы и подтверждение перевода поставщику. Для юридических лиц дополнительно готовим пакет пояснений для банка в рамках валютного контроля.</p></details>
       <details><summary>Работаете ли вы с физическими лицами?</summary><p>Да, но с обязательной идентификацией и по договору. Анонимных операций мы не проводим.</p></details>
       <details><summary>Можно ли одновременно заказать доставку груза?</summary><p>Да. TT Logistic и TT Exchange — одна группа: мы оплачиваем инвойс, забираем товар у поставщика и везём его до вашего склада. Это один менеджер и один комплект документов.</p></details>
@@ -295,7 +321,7 @@
 </section>
 
 <!-- ================= КОНТАКТЫ ================= -->
-<section class="sec sec--alt" id="contact">
+<section class="sec sec--tint" id="contact">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Заявка на обмен</h2>
@@ -314,7 +340,7 @@
         </div>
       </div>
 
-      <form data-lead="exchange">
+      <form class="form" data-lead="exchange">
         <div class="field-row">
           <label class="field"><span>Имя</span><input type="text" name="Имя" required autocomplete="name"></label>
           <label class="field"><span>Телефон или Telegram</span><input type="text" name="Контакт" required></label>

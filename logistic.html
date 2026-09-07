@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TT Logistic — доставка грузов из Китая под ключ</title>
 <meta name="description" content="TT Logistic: выкуп товара у поставщика, консолидация на складе в Китае, авто, ж/д, авиа и морская доставка, таможенное оформление и доставка до склада в России.">
-<meta name="theme-color" content="#0B111E">
+<meta name="theme-color" content="#EDECF1">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-700-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-800-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -20,7 +20,7 @@
   <div class="hdr__in">
     <a class="hdr__logo logo" href="index.html" aria-label="TT Logistic — на главную">
       <img class="logo__mark" src="assets/img/mark-logistic.png" alt="" width="460" height="299">
-      <img class="logo__word" src="assets/img/word-logistic.png" alt="TT Logistic — доставка из Китая" width="720" height="132">
+      <img class="logo__word" src="assets/img/word-logistic-dark.png" alt="TT Logistic — доставка из Китая" width="720" height="132">
     </a>
     <nav class="hdr__nav" aria-label="Основная навигация">
       <a href="#about">О нас</a>
@@ -45,27 +45,28 @@
 <!-- ================= ГЕРОЙ ================= -->
 <section class="hero">
   <div class="grid-bg"></div>
+  <div class="glow hero__glow"></div>
   <div class="hero__art" aria-hidden="true">
     <svg viewBox="0 0 900 700" fill="none">
-      <g stroke="#9BA7B4" stroke-width="2" opacity=".55">
+      <g stroke="#0A0F1E" stroke-width="2" opacity=".22">
         <path d="M300 0v170M420 0v150M540 0v170M660 0v150"/>
         <path d="M300 170 380 210M420 150 380 210M540 170 620 210M660 150 620 210"/>
       </g>
-      <g opacity=".5">
-        <rect x="330" y="212" width="340" height="230" rx="8" fill="#131E33" stroke="#9BA7B4" stroke-width="3"/>
-        <g stroke="#9BA7B4" stroke-width="2" opacity=".7">
+      <g opacity=".32">
+        <rect x="330" y="212" width="340" height="230" rx="10" fill="#0B57F0" fill-opacity=".08" stroke="#0A0F1E" stroke-width="3"/>
+        <g stroke="#0A0F1E" stroke-width="2" opacity=".55">
           <path d="M360 212v230M392 212v230M424 212v230M456 212v230M488 212v230M520 212v230M552 212v230M584 212v230M616 212v230M648 212v230"/>
           <path d="M330 250h340M330 404h340"/>
         </g>
-        <rect x="352" y="196" width="52" height="18" rx="4" fill="#9BA7B4"/>
-        <rect x="596" y="196" width="52" height="18" rx="4" fill="#9BA7B4"/>
+        <rect x="352" y="196" width="52" height="18" rx="5" fill="#0A0F1E"/>
+        <rect x="596" y="196" width="52" height="18" rx="5" fill="#0A0F1E"/>
       </g>
-      <g stroke="#9BA7B4" stroke-width="2" opacity=".28">
+      <g stroke="#0B57F0" stroke-width="2" opacity=".3">
         <path d="M120 520h660M180 570h540M240 620h420"/>
       </g>
-      <g opacity=".35">
-        <circle cx="450" cy="330" r="250" stroke="#3E7FC1" stroke-width="1.5"/>
-        <ellipse cx="450" cy="330" rx="250" ry="90" stroke="#3E7FC1" stroke-width="1.5"/>
+      <g opacity=".3">
+        <circle cx="450" cy="330" r="250" stroke="#0B57F0" stroke-width="1.5"/>
+        <ellipse cx="450" cy="330" rx="250" ry="90" stroke="#0B57F0" stroke-width="1.5"/>
       </g>
     </svg>
   </div>
@@ -76,7 +77,10 @@
         <div class="eyebrow">01 / Логистика</div>
         <div class="script" style="font-size:22px;margin-top:6px">Доставка из Китая</div>
       </div>
-      <div class="eyebrow" style="text-align:right">Гуанчжоу · Иу · Шэньчжэнь<br>Москва · Екатеринбург · Новосибирск</div>
+      <div style="text-align:right">
+        <p class="tagline" style="margin:0 0 8px">Ваш мост в <b>Китай</b></p>
+        <div class="eyebrow">Гуанчжоу · Иу · Шэньчжэнь<br>Москва · Екатеринбург · Новосибирск</div>
+      </div>
     </div>
 
     <h1 class="hero__title">Возим груз<br>из Китая<br><em>под ключ</em></h1>
@@ -152,7 +156,7 @@
 </section>
 
 <!-- ================= УСЛУГИ ================= -->
-<section class="sec sec--alt" id="services">
+<section class="sec sec--tint" id="services">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Услуги</h2>
@@ -266,7 +270,7 @@
 </section>
 
 <!-- ================= КАК РАБОТАЕМ ================= -->
-<section class="sec sec--paper" id="how">
+<section class="sec sec--dark" id="how">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Как работаем</h2>
@@ -283,7 +287,7 @@
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="sec sec--alt" id="faq">
+<section class="sec sec--paper" id="faq">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Вопросы</h2>
@@ -317,7 +321,7 @@
 </section>
 
 <!-- ================= КОНТАКТЫ ================= -->
-<section class="sec sec--alt" id="contact">
+<section class="sec sec--tint" id="contact">
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Оставить заявку</h2>
@@ -337,7 +341,7 @@
         </div>
       </div>
 
-      <form data-lead="logistic">
+      <form class="form" data-lead="logistic">
         <div class="field-row">
           <label class="field"><span>Имя</span><input type="text" name="Имя" required autocomplete="name"></label>
           <label class="field"><span>Телефон или Telegram</span><input type="text" name="Контакт" required></label>

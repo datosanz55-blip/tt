@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TT — доставка из Китая и обмен юаней · выберите направление</title>
 <meta name="description" content="Две услуги в одной экосистеме TT: логистика и выкуп товара из Китая под ключ и обмен рублей на юани с оплатой инвойсов. Выберите направление на глобусе.">
-<meta name="theme-color" content="#0B111E">
+<meta name="theme-color" content="#EDECF1">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-700-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-800-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -17,6 +17,8 @@
 
 <main class="portal">
   <div class="grid-bg"></div>
+  <div class="glow portal__glow--a"></div>
+  <div class="glow portal__glow--b"></div>
 
   <header class="portal__top">
     <div class="portal__brand">
@@ -25,10 +27,13 @@
         <span>Логистика и валютные расчёты с Китаем</span>
       </div>
     </div>
-    <p class="portal__hint">
-      Крутите глобус мышью или стрелками <b>←</b> <b>→</b>. С одной стороны — доставка грузов,
-      с другой — обмен рублей на юани. Выберите нужное направление.
-    </p>
+    <div>
+      <p class="tagline" style="text-align:right;margin:0 0 10px">Your connection to <b>China</b></p>
+      <p class="portal__hint">
+        Крутите глобус мышью или клавишами <kbd>←</kbd> <kbd>→</kbd>. С одной стороны —
+        доставка грузов, с другой — обмен рублей на юани.
+      </p>
+    </div>
   </header>
 
   <section class="stage">
@@ -47,13 +52,13 @@
         в Гуанчжоу и Иу, таможенное оформление и доставка до вашего склада.
       </p>
       <span class="choice__go">Перейти на сайт
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.6"/></svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
       </span>
     </a>
 
     <!-- Глобус -->
     <div class="globe">
-      <canvas id="globe" class="globe__canvas" width="480" height="480" tabindex="0"
+      <canvas id="globe" class="globe__canvas" width="500" height="500" tabindex="0"
               role="application" aria-label="Глобус выбора направления"></canvas>
       <div class="globe__status" aria-live="polite">
         <div class="globe__status-label">Выбрано направление</div>
@@ -62,7 +67,7 @@
       </div>
       <div class="globe__drag">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M1 8h14M4 5 1 8l3 3M12 5l3 3-3 3" stroke="currentColor" stroke-width="1.4"/>
+          <path d="M1 8h14M4 5 1 8l3 3M12 5l3 3-3 3" stroke="currentColor" stroke-width="1.6"/>
         </svg>
         Потяните глобус
       </div>
@@ -76,12 +81,15 @@
       </span>
       <h2 class="choice__name">Обмен юаней</h2>
       <div class="choice__tag">TT Exchange</div>
+      <div class="choice__rate">
+        <span>Курс дня от</span><b><span data-fx-base>—</span> ₽ / ¥</b>
+      </div>
       <p class="choice__desc">
         Обмен рублей на юани по курсу дня, оплата инвойсов китайским поставщикам,
         переводы на счета в CNY. Прозрачная комиссия и договор.
       </p>
       <span class="choice__go">Перейти на сайт
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.6"/></svg>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12 12 2M5 2h7v7" stroke="currentColor" stroke-width="1.8"/></svg>
       </span>
     </a>
   </section>
@@ -93,6 +101,9 @@
 
 <div class="curtain" aria-hidden="true"></div>
 
+<script src="assets/js/config.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/calc-exchange.js"></script>
 <script src="assets/js/globe.js"></script>
 </body>
 </html>
