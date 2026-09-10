@@ -7,7 +7,7 @@
 <meta name="description" content="Две услуги в одной экосистеме TT: логистика и выкуп товара из Китая под ключ и обмен рублей на юани с оплатой инвойсов. Выберите направление на глобусе.">
 <meta name="theme-color" content="#EDECF1">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-800-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-700-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -17,15 +17,37 @@
 
 <main class="portal">
   <div class="grid-bg"></div>
+  <div class="sheen" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="shA30" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C6DBFB" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="shB30" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#DCE8FB" stop-opacity=".12"/>
+        </linearGradient>
+        <filter id="shF30" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="22"/>
+        </filter>
+      </defs>
+      <path d="M1150-140C1470 110 1520 540 1230 1040H1620V-140Z" fill="url(#shA30)"/>
+      <path d="M1060-100C1390 150 1440 570 1150 1000" fill="none" stroke="#8FC2FC" stroke-width="26" opacity=".5" filter="url(#shF30)"/>
+      <path d="M1060-100C1390 150 1440 570 1150 1000" fill="none" stroke="#FFFFFF" stroke-width="7" opacity=".85"/>
+      <path d="M-260 1000C40 700 420 720 700 940V1060H-260Z" fill="url(#shB30)"/>
+      <path d="M-260 930C60 630 440 660 740 890" fill="none" stroke="#9CC7FB" stroke-width="22" opacity=".45" filter="url(#shF30)"/>
+      <path d="M-260 930C60 630 440 660 740 890" fill="none" stroke="#FFFFFF" stroke-width="6" opacity=".8"/>
+    </svg>
+  </div>
   <div class="glow portal__glow--a"></div>
   <div class="glow portal__glow--b"></div>
 
   <header class="portal__top">
-    <div class="portal__brand">
+    <div class="portal__brand logo">
       <div class="portal__brand-mark">TT</div>
-      <div class="portal__brand-text">TT Group
-        <span>Логистика и валютные расчёты с Китаем</span>
-      </div>
+      <span class="logo__rule"></span>
+      <span class="logo__name"><b>TT</b> Group</span>
     </div>
     <div>
       <p class="tagline" style="text-align:right;margin:0 0 10px">Your connection to <b>China</b></p>

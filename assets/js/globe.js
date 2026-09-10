@@ -107,8 +107,8 @@
 
     // внешнее свечение
     var glow = ctx.createRadialGradient(cx, cy, R * 0.75, cx, cy, R * 1.55);
-    glow.addColorStop(0, 'rgba(11,87,240,0.30)');
-    glow.addColorStop(0.5, 'rgba(127,186,252,0.16)');
+    glow.addColorStop(0, 'rgba(11,85,236,0.26)');
+    glow.addColorStop(0.5, 'rgba(143,194,252,0.20)');
     glow.addColorStop(1, 'rgba(127,186,252,0)');
     ctx.fillStyle = glow;
     ctx.beginPath(); ctx.arc(cx, cy, R * 1.55, 0, Math.PI * 2); ctx.fill();
@@ -117,17 +117,17 @@
     var body = ctx.createRadialGradient(
       cx - R * 0.36, cy - R * 0.40, R * 0.05,
       cx, cy, R * 1.04);
-    body.addColorStop(0, '#4E93EE');
-    body.addColorStop(0.34, '#1F63D8');
-    body.addColorStop(0.72, '#0B3AA6');
-    body.addColorStop(1, '#04205E');
+    body.addColorStop(0, '#DCEBFF');
+    body.addColorStop(0.30, '#8FBEF6');
+    body.addColorStop(0.66, '#3579E2');
+    body.addColorStop(1, '#0E3E9C');
     ctx.fillStyle = body;
     ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
 
     // затемнение к краю — объём
     var shade = ctx.createRadialGradient(cx, cy, R * 0.45, cx, cy, R);
-    shade.addColorStop(0, 'rgba(2,14,48,0)');
-    shade.addColorStop(1, 'rgba(2,14,48,0.55)');
+    shade.addColorStop(0, 'rgba(6,30,80,0)');
+    shade.addColorStop(1, 'rgba(6,30,80,0.32)');
     ctx.fillStyle = shade;
     ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI * 2); ctx.fill();
 
@@ -150,8 +150,8 @@
       var t = (lvl2 + 0.5) / LEVELS;
       var r = (land ? 1.85 : 1.15) * k * (0.6 + 0.7 * t);
       ctx.fillStyle = land
-        ? 'rgba(248,252,255,' + (0.5 + 0.5 * t) + ')'
-        : 'rgba(173,214,255,' + (0.16 + 0.34 * t) + ')';
+        ? 'rgba(255,255,255,' + (0.62 + 0.38 * t) + ')'
+        : 'rgba(120,175,240,' + (0.14 + 0.3 * t) + ')';
       ctx.beginPath();
       for (j = 0; j < list.length; j++) {
         ctx.moveTo(list[j].x + r, list[j].y);
@@ -243,7 +243,7 @@
       }
 
       ctx.save();
-      ctx.shadowColor = 'rgba(11,87,240,0.9)';
+      ctx.shadowColor = 'rgba(11,85,236,0.9)';
       ctx.shadowBlur = 14 * k;
       ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
       ctx.fillStyle = '#fff'; ctx.fill();
@@ -252,7 +252,7 @@
       // подпись на светлой плашке — читается и на шаре, и за его краем
       var dir = s.lon > 0 ? 1 : -1;
       var text = s.label;
-      ctx.font = '700 ' + Math.round(11 * k) + 'px Manrope, sans-serif';
+      ctx.font = '700 ' + Math.round(11 * k) + 'px Inter, sans-serif';
       var w = ctx.measureText(text).width + 18 * k;
       var h = 22 * k;
       var bx = dir > 0 ? p.x + 12 * k : p.x - 12 * k - w;
@@ -268,12 +268,12 @@
       ctx.save();
       ctx.shadowColor = 'rgba(10,15,30,0.22)';
       ctx.shadowBlur = 12 * k; ctx.shadowOffsetY = 3 * k;
-      ctx.fillStyle = isActive ? '#0B57F0' : 'rgba(255,255,255,0.94)';
+      ctx.fillStyle = isActive ? '#0B55EC' : 'rgba(255,255,255,0.95)';
       roundRect(bx, by, w, h, h / 2);
       ctx.fill();
       ctx.restore();
 
-      ctx.fillStyle = isActive ? '#fff' : '#0A0F1E';
+      ctx.fillStyle = isActive ? '#fff' : '#050A16';
       ctx.textBaseline = 'middle';
       ctx.textAlign = 'center';
       ctx.fillText(text, bx + w / 2, by + h / 2 + 0.5 * k);

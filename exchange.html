@@ -7,7 +7,7 @@
 <meta name="description" content="TT Exchange: обмен рублей на юани по курсу дня, оплата инвойсов китайским поставщикам, переводы в CNY. Договор, прозрачная комиссия, документы для валютного контроля.">
 <meta name="theme-color" content="#EDECF1">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-800-cyrillic.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-700-cyrillic.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-400-cyrillic.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/base.css">
@@ -20,10 +20,8 @@
   <div class="hdr__in">
     <a class="hdr__logo logo" href="index.html" aria-label="TT Exchange — на главную">
       <img class="logo__mark" src="assets/img/mark-exchange.png" alt="" width="460" height="350">
-      <span class="logo__text">
-        <span class="logo__name">TT Exchange</span>
-        <span class="logo__sub">Обмен юаней</span>
-      </span>
+      <span class="logo__rule"></span>
+      <span class="logo__name"><b>TT</b> Exchange</span>
     </a>
     <nav class="hdr__nav" aria-label="Основная навигация">
       <a href="#about">О нас</a>
@@ -48,6 +46,29 @@
 <!-- ================= ГЕРОЙ ================= -->
 <section class="hero">
   <div class="grid-bg"></div>
+  <div class="sheen" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="shA11" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C6DBFB" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="shB11" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#DCE8FB" stop-opacity=".12"/>
+        </linearGradient>
+        <filter id="shF11" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="22"/>
+        </filter>
+      </defs>
+      <path d="M1150-140C1470 110 1520 540 1230 1040H1620V-140Z" fill="url(#shA11)"/>
+      <path d="M1060-100C1390 150 1440 570 1150 1000" fill="none" stroke="#8FC2FC" stroke-width="26" opacity=".5" filter="url(#shF11)"/>
+      <path d="M1060-100C1390 150 1440 570 1150 1000" fill="none" stroke="#FFFFFF" stroke-width="7" opacity=".85"/>
+      <path d="M-260 1000C40 700 420 720 700 940V1060H-260Z" fill="url(#shB11)"/>
+      <path d="M-260 930C60 630 440 660 740 890" fill="none" stroke="#9CC7FB" stroke-width="22" opacity=".45" filter="url(#shF11)"/>
+      <path d="M-260 930C60 630 440 660 740 890" fill="none" stroke="#FFFFFF" stroke-width="6" opacity=".8"/>
+    </svg>
+  </div>
   <div class="glow hero__glow"></div>
   <div class="hero__art hero__art--globe" aria-hidden="true">
     <img src="assets/img/hero-globe.jpg" alt="" width="656" height="720" loading="eager" decoding="async">
@@ -57,7 +78,6 @@
     <div class="hero__top">
       <div>
         <div class="eyebrow">02 / Валютные расчёты</div>
-        <div class="script" style="font-size:22px;margin-top:6px">Обмен юаней</div>
       </div>
       <div style="text-align:right">
         <p class="tagline" style="margin:0 0 8px">Your connection to <b>China</b></p>
@@ -69,6 +89,7 @@
 
     <div class="hero__grid">
       <div>
+        <span class="bar"></span>
         <p class="hero__lead">
           Меняем рубли на юани по курсу дня и оплачиваем инвойсы вашим поставщикам в Китае.
           Комиссия известна до сделки, договор и закрывающие документы — обязательная часть работы,
@@ -242,7 +263,30 @@
 
 
 <!-- ================= КАК ПРОХОДИТ СДЕЛКА ================= -->
-<section class="sec sec--dark" id="how">
+<section class="sec sec--sheen" id="how">
+  <div class="sheen" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="shA12" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C6DBFB" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="shB12" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+          <stop offset="1" stop-color="#DCE8FB" stop-opacity=".12"/>
+        </linearGradient>
+        <filter id="shF12" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="22"/>
+        </filter>
+      </defs>
+      <path d="M1150-140C1470 110 1520 540 1230 1040H1620V-140Z" fill="url(#shA12)"/>
+      <path d="M1060-100C1390 150 1440 570 1150 1000" fill="none" stroke="#8FC2FC" stroke-width="26" opacity=".5" filter="url(#shF12)"/>
+      <path d="M1060-100C1390 150 1440 570 1150 1000" fill="none" stroke="#FFFFFF" stroke-width="7" opacity=".85"/>
+      <path d="M-260 1000C40 700 420 720 700 940V1060H-260Z" fill="url(#shB12)"/>
+      <path d="M-260 930C60 630 440 660 740 890" fill="none" stroke="#9CC7FB" stroke-width="22" opacity=".45" filter="url(#shF12)"/>
+      <path d="M-260 930C60 630 440 660 740 890" fill="none" stroke="#FFFFFF" stroke-width="6" opacity=".8"/>
+    </svg>
+  </div>
   <div class="shell">
     <div class="sec__head reveal">
       <h2 class="sec__title">Как проходит сделка</h2>

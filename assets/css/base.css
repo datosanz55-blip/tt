@@ -1,42 +1,43 @@
 /* ============================================================
    TT — общая дизайн-система
-   Светлая гамма фирменного стиля: холодный жемчужный фон,
-   тёмно-синие чернила с логотипов, электрик-синий акцент
-   и небесно-голубой для глобуса и свечений.
+   Палитра и типографика сняты с фирменных карточек TT EXCHANGE:
+   жемчужный фон с голубым свечением, почти чёрные чернила,
+   электрик-синий акцент, узкий гротеск в заголовках.
    ============================================================ */
 
 :root{
-  /* Чернила — тёмно-синий с логотипов */
-  --ink:#0A0F1E;
-  --ink-2:#18213A;
-  --ink-3:#3A465F;
-  --muted:#6B7385;
-  --muted-2:#8B93A6;
+  /* Чернила */
+  --ink:#050A16;
+  --ink-2:#161C2A;
+  --ink-3:#3A4150;
+  --muted:#4B505C;
+  --muted-2:#828A99;
 
   /* Поверхности */
-  --bg:#EDECF1;
-  --bg-2:#E3E4EB;
-  --bg-3:#F6F7FB;
+  --bg:#F1F3F8;
+  --bg-2:#E7EBF4;
+  --bg-3:#F7F8FB;
   --surface:#FFFFFF;
-  --hairline:#D8DAE4;
-  --hairline-soft:#E5E7EF;
+  --hairline:#DBE0EA;
+  --hairline-soft:#E8ECF4;
 
   /* Акценты */
-  --accent:#0B57F0;         /* электрик-синий, как «ЛУЧШИЙ КУРС» */
+  --accent:#0B55EC;         /* «ЛУЧШИЙ КУРС», кнопки, акцентные слова */
   --accent-ink:#0A3FB0;
-  --accent-soft:#7FBAFC;    /* небесный, точки глобуса */
-  --accent-wash:#E8EFFE;
+  --accent-2:#3B82EE;       /* вторая строка заголовка */
+  --accent-soft:#7FBAFC;    /* свечения */
+  --accent-wash:#E7EFFE;
+  --bloom:#D2E3FA;          /* голубой разлив в фоне */
 
-  --steel:#9BA7B4;          /* серый с логотипов */
-
-  /* Тени — мягкие, холодные */
-  --sh-1:0 1px 2px rgba(10,15,30,.05), 0 8px 24px -12px rgba(10,15,30,.14);
-  --sh-2:0 2px 6px rgba(10,15,30,.06), 0 26px 60px -28px rgba(11,87,240,.35);
+  /* Тени */
+  --sh-1:0 1px 2px rgba(5,10,22,.04), 0 10px 28px -14px rgba(5,10,22,.14);
+  --sh-2:0 2px 6px rgba(5,10,22,.05), 0 26px 60px -28px rgba(11,85,236,.4);
+  --sh-glass:0 1px 1px rgba(255,255,255,.9) inset, 0 8px 24px -14px rgba(5,10,22,.16);
 
   /* Типографика */
-  --display:'Manrope',"Segoe UI",system-ui,sans-serif;
-  --script:'Pacifico',"Segoe Script",cursive;
-  --text:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --display:'Oswald',"Arial Narrow",Impact,sans-serif;   /* крупные заголовки */
+  --ui:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --text:var(--ui);
 
   --shell:min(1280px,92vw);
   --r:18px;
@@ -53,7 +54,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink-2);
-  font-family:var(--text);
+  font-family:var(--ui);
   font-size:16px;
   line-height:1.62;
   -webkit-font-smoothing:antialiased;
@@ -66,41 +67,52 @@ button,input,select,textarea{font:inherit;color:inherit}
 
 ::selection{background:var(--accent);color:#fff}
 
-h1,h2,h3,h4{
+/* Крупные заявления — узкий гротеск, как на карточках */
+h1,h2{
   font-family:var(--display);
-  font-weight:800;
-  line-height:1.02;
-  letter-spacing:-.03em;
+  font-weight:700;
+  line-height:.98;
+  letter-spacing:.005em;
+  text-transform:uppercase;
   margin:0;
   color:var(--ink);
   text-wrap:balance;
+}
+/* Подзаголовки и названия карточек — обычный гротеск */
+h3,h4{
+  font-family:var(--ui);
+  font-weight:700;
+  line-height:1.2;
+  letter-spacing:-.015em;
+  margin:0;
+  color:var(--ink);
 }
 
 .shell{width:var(--shell);margin-inline:auto}
 
 /* --- утилиты -------------------------------------------------- */
 .eyebrow{
-  font-family:var(--display);
+  font-family:var(--ui);
   font-weight:600;
   font-size:11.5px;
-  letter-spacing:.22em;
+  letter-spacing:.2em;
   text-transform:uppercase;
   color:var(--muted-2);
 }
-.script{
-  font-family:var(--script);
-  letter-spacing:0;
-  color:var(--accent);
-}
 .muted{color:var(--muted)}
 .accent{color:var(--accent)}
-.num{font-family:var(--display);font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+
+/* Синяя черта над подписью — приём с карточек */
+.bar{
+  display:block;width:46px;height:4px;border-radius:2px;
+  background:var(--accent);margin-bottom:16px;
+}
 
 /* Растянутая по ширине служебная строка */
 .justified{
   text-align:justify;
   text-align-last:justify;
-  font-family:var(--display);
+  font-family:var(--ui);
   font-size:11px;
   font-weight:600;
   letter-spacing:.14em;
@@ -109,26 +121,26 @@ h1,h2,h3,h4{
   line-height:2;
 }
 
-/* Слоган с акцентным словом — приём с фирменного макета */
+/* Слоган с акцентным словом */
 .tagline{
-  font-family:var(--display);
-  font-weight:700;
-  font-size:clamp(12px,1.15vw,14px);
-  letter-spacing:.16em;
+  font-family:var(--ui);
+  font-weight:600;
+  font-size:clamp(12px,1.1vw,14px);
+  letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--ink);
 }
-.tagline b{color:var(--accent);font-weight:700}
+.tagline b{color:var(--accent-2);font-weight:600}
 
 /* Крупная фоновая надпись */
 .mega{
   font-family:var(--display);
-  font-weight:800;
+  font-weight:700;
   text-transform:uppercase;
   line-height:.85;
-  letter-spacing:-.05em;
+  letter-spacing:.01em;
   font-size:clamp(48px,12vw,180px);
-  color:rgba(10,15,30,.06);
+  color:rgba(5,10,22,.06);
   white-space:nowrap;
   user-select:none;
   pointer-events:none;
@@ -138,8 +150,8 @@ h1,h2,h3,h4{
 .grid-bg{
   position:absolute;inset:0;
   background-image:
-    linear-gradient(to right,rgba(10,15,30,.055) 1px,transparent 1px),
-    linear-gradient(to bottom,rgba(10,15,30,.055) 1px,transparent 1px);
+    linear-gradient(to right,rgba(5,10,22,.05) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(5,10,22,.05) 1px,transparent 1px);
   background-size:clamp(76px,10vw,150px) clamp(76px,10vw,150px);
   -webkit-mask-image:radial-gradient(115% 100% at 50% 28%,#000 25%,transparent 100%);
           mask-image:radial-gradient(115% 100% at 50% 28%,#000 25%,transparent 100%);
@@ -150,7 +162,18 @@ h1,h2,h3,h4{
 .glow{
   position:absolute;border-radius:50%;
   pointer-events:none;filter:blur(60px);
-  background:radial-gradient(circle,rgba(11,87,240,.22),rgba(127,186,252,.12) 45%,transparent 70%);
+  background:radial-gradient(circle,rgba(11,85,236,.2),rgba(127,186,252,.12) 45%,transparent 70%);
+}
+
+/* --- Глянцевые ленты фона (с фирменных карточек) --------------- */
+.sheen{
+  position:absolute;inset:0;
+  overflow:hidden;pointer-events:none;
+  z-index:0;
+}
+.sheen svg{
+  position:absolute;inset:0;
+  width:100%;height:100%;
 }
 
 /* Пунктирная линия-выноска между подписью и значением */
@@ -163,18 +186,16 @@ h1,h2,h3,h4{
   padding:15px 26px;
   background:var(--bg-btn);color:var(--fg);
   border:1px solid var(--bd);border-radius:999px;
-  font-family:var(--display);font-weight:700;font-size:13px;
-  letter-spacing:.06em;
+  font-family:var(--ui);font-weight:700;font-size:13.5px;
+  letter-spacing:.01em;
   cursor:pointer;
   box-shadow:var(--sh-2);
   transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s,box-shadow .25s;
 }
 .btn:hover{transform:translateY(-2px);background:var(--accent-ink)}
 .btn:active{transform:translateY(0)}
-.btn--ghost{--bg-btn:transparent;--fg:var(--ink);--bd:var(--hairline);box-shadow:none}
-.btn--ghost:hover{background:var(--surface);border-color:var(--accent);color:var(--accent)}
-.btn--light{--bg-btn:var(--surface);--fg:var(--ink);box-shadow:var(--sh-1)}
-.btn--light:hover{background:var(--surface);color:var(--accent)}
+.btn--ghost{--bg-btn:rgba(255,255,255,.7);--fg:var(--ink);--bd:var(--hairline);box-shadow:var(--sh-glass)}
+.btn--ghost:hover{background:#fff;border-color:var(--accent);color:var(--accent)}
 .btn__arrow{transition:transform .25s var(--ease)}
 .btn:hover .btn__arrow{transform:translate(3px,-3px)}
 
@@ -193,18 +214,15 @@ h1,h2,h3,h4{
 
 /* --- Логотип ---------------------------------------------------
    В крупных местах (портал, подвал, плашка перехода) стоит цельный
-   логотип. В шапке — фирменный знак и название набором: надпись на
-   оригинале перекрыта тенью грузовика и не отделяется без потерь. */
-.logo{display:inline-flex;align-items:center;gap:13px}
+   логотип. В шапке, как на фирменных карточках, — знак, вертикальная
+   черта и название набором. */
+.logo{display:inline-flex;align-items:center;gap:14px}
 .logo__mark{height:var(--logo-mark,46px);width:auto;flex:none}
-.logo__text{display:flex;flex-direction:column;gap:2px;line-height:1}
+.logo__rule{width:1px;height:var(--logo-rule,30px);background:var(--hairline);flex:none}
 .logo__name{
-  font-family:var(--display);font-weight:800;
-  font-size:var(--logo-name,17px);letter-spacing:-.015em;color:var(--ink);
-  text-transform:uppercase;
+  font-family:var(--ui);font-weight:600;
+  font-size:var(--logo-name,19px);letter-spacing:.005em;color:var(--ink);
+  text-transform:uppercase;white-space:nowrap;
 }
-.logo__sub{
-  font-family:var(--script);
-  font-size:var(--logo-sub,12.5px);color:var(--accent);letter-spacing:0;
-}
+.logo__name b{font-weight:800}
 .logo--lockup img{height:var(--logo-lockup,120px);width:auto}

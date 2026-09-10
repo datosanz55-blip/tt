@@ -21,16 +21,14 @@
   padding:26px 0 0;
   display:flex;align-items:flex-start;justify-content:space-between;gap:24px;
 }
-.portal__brand{display:flex;align-items:center;gap:14px}
+.portal__brand{--logo-rule:32px;--logo-name:19px}
 .portal__brand-mark{
   width:46px;height:46px;flex:none;
   display:grid;place-items:center;
   background:var(--ink);color:#fff;border-radius:14px;
-  font-family:var(--display);font-weight:800;font-size:17px;
-  letter-spacing:.02em;box-shadow:var(--sh-1);
+  font-family:var(--ui);font-weight:800;font-size:17px;
+  letter-spacing:.01em;box-shadow:var(--sh-1);
 }
-.portal__brand-text{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
-.portal__brand-text span{display:block;font-family:var(--text);font-weight:400;font-size:11.5px;letter-spacing:.02em;text-transform:none;color:var(--muted)}
 .portal__hint{
   max-width:330px;text-align:right;
   font-size:12.5px;line-height:1.7;color:var(--muted);
@@ -42,6 +40,7 @@
 }
 
 /* Основная сцена */
+
 .stage{
   position:relative;z-index:2;
   flex:1;
@@ -59,8 +58,9 @@
 }
 
 /* Карточки выбора */
+
 .choice{
-  position:relative;z-index:2;
+  position:relative;z-index:3;
   display:block;width:100%;
   text-align:left;
   padding:26px 26px 24px;
@@ -92,18 +92,18 @@
 .choice__logo{display:block;margin-bottom:16px;--logo-lockup:clamp(80px,8vw,104px)}
 .choice--right .choice__logo{display:flex;justify-content:flex-end}
 .choice__name{font-size:clamp(23px,2.5vw,33px);margin-bottom:4px}
-.choice__tag{font-family:var(--script);font-size:16px;color:var(--accent);margin-bottom:14px}
+.choice__tag{font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
 .choice__desc{font-size:13.5px;line-height:1.65;color:var(--muted);margin:0 0 20px}
 .choice__go{
   display:inline-flex;align-items:center;gap:9px;
-  font-family:var(--display);font-weight:700;font-size:12.5px;
-  letter-spacing:.06em;color:var(--accent);
+  font-family:var(--ui);font-weight:700;font-size:13px;
+  letter-spacing:0;color:var(--accent);
   transition:gap .3s var(--ease);
 }
 .choice:hover .choice__go{gap:15px}
 .choice__num{
   position:absolute;top:20px;
-  font-family:var(--display);font-weight:600;font-size:11px;
+  font-family:var(--ui);font-weight:600;font-size:11px;
   letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);
 }
 .choice--left .choice__num{right:24px}
@@ -114,27 +114,30 @@
   display:flex;align-items:baseline;gap:8px;justify-content:flex-end;
   padding-top:12px;margin-bottom:16px;border-top:1px solid var(--hairline-soft);
 }
-.choice__rate span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);font-family:var(--display);font-weight:600}
-.choice__rate b{font-family:var(--display);font-weight:800;font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.choice__rate span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);font-weight:600}
+.choice__rate b{font-family:var(--ui);font-weight:800;font-size:22px;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
 
 /* Глобус */
 .globe{position:relative;display:grid;place-items:center;padding-block:6px}
 .globe__canvas{width:100%;height:auto;touch-action:none;cursor:grab}
 .globe__canvas:active{cursor:grabbing}
 .globe__status{margin-top:6px;text-align:center;min-height:56px}
+
 .globe__status-label{
-  font-family:var(--display);font-weight:600;font-size:10.5px;letter-spacing:.24em;
+  font-family:var(--ui);font-weight:600;font-size:10.5px;letter-spacing:.24em;
   text-transform:uppercase;color:var(--muted-2);
 }
+
 .globe__status-value{
-  font-family:var(--display);font-weight:800;font-size:clamp(19px,2.3vw,26px);
+  font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:clamp(19px,2.3vw,26px);
   color:var(--ink);letter-spacing:-.02em;
 }
 .globe__drag{
   display:inline-flex;align-items:center;gap:9px;margin-top:14px;
   padding:8px 16px;border-radius:999px;
-  background:rgba(255,255,255,.72);border:1px solid var(--hairline-soft);
-  font-family:var(--display);font-weight:600;
+  background:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.9);
+  box-shadow:var(--sh-glass);
+  font-family:var(--ui);font-weight:600;
   font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
 }
 .globe__drag svg{color:var(--accent)}
